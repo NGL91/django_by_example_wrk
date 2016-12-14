@@ -37,8 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'blog',
     'taggit',
+    # 'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -109,3 +113,19 @@ EMAIL_HOST_USER = 'mr.jerry91@gmail.com'
 EMAIL_HOST_PASSWORD = 'yitacqcvobgjumqi'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+STATICFILES_DIRS = (
+        os.path.join(BASE_DIR,'static'),)
+
+
+
+SITE_ID=1
+
+
+# HAYSTACK_CONNECTIONS = {
+#  'default': {
+#  'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+#  'URL': 'http://127.0.0.1:8983/solr/blog'
+#  },
+# }

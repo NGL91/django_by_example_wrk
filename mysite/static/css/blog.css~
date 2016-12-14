@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+.content{
+	width: 75%;
+	float:left;
+}
+
+.sidebar{
+	width:25%;
+	float: left;
+}
