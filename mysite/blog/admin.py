@@ -26,3 +26,12 @@ class PostAdmin(admin.ModelAdmin):
 
 #Another way to register admin with Post
 # admin.site.register(models.Post, PostAdmin)
+
+
+@admin.register(models.Comment)
+class CommentAdmin(admin.ModelAdmin):
+	list_display = ('name','email','post','created','active')
+	list_filter = ('active','created','updated')
+	search_fields = ('name','email','body')
+
+	raw_id_fields = ('post',)
