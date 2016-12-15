@@ -43,6 +43,8 @@ INSTALLED_APPS = (
     #python-social-auth
     'social.apps.django_app.default',
 
+    'images',
+
 )
 
 MIDDLEWARE_CLASSES = (
