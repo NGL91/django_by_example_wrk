@@ -1,1 +1,2 @@
-python-social-auth==0.2.12
+python-social-auth==0.2.1
+sorl-thumbnail==12.3

@@ -25,7 +25,7 @@ SECRET_KEY = '&%o!avs7^csy(ps$4a9bi&czy6=fkzm*iskui+)k_r#-m0*wck'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.com','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','mysite.com','localhost']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = (
 
     #python-social-auth
     'social.apps.django_app.default',
-
+    'sorl.thumbnail',
     'images',
 
 )
