@@ -25,7 +25,7 @@ SECRET_KEY = '&%o!avs7^csy(ps$4a9bi&czy6=fkzm*iskui+)k_r#-m0*wck'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com','localhost']
 
 
 # Application definition
@@ -39,6 +39,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #python-social-auth
+    'social.apps.django_app.default',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,3 +106,33 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
+
+#Use when reverse URLs before project URLs configuration is loaded
+from django.core.urlresolvers import reverse_lazy
+
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social.backends.facebook.Facebook2OAuth2',
+    # 'social.backends.twitter.TwitterOAuth',
+    'social.backends.google.GoogleOAuth2',
+    )
+
+
+#Python-social-ath facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '525151244328288'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'e07472957e95a6452c89afa5781cd1fc'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1030545425459-sthq4vorht2kb5m1lblsm494iqj94l26.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'l23U7CSP1dt-cxK5z6bPgd5H'
