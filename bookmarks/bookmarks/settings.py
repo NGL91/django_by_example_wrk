@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'social.apps.django_app.default',
     'sorl.thumbnail',
     'images',
+    'actions',
 
 )
 
@@ -88,7 +89,16 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'bookmarks',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -138,3 +148,11 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1030545425459-sthq4vorht2kb5m1lblsm494iqj94l26.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'l23U7CSP1dt-cxK5z6bPgd5H'
+
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
+}
+
+REDIS_HOST='127.0.0.1'
+REDIS_PORT = 6379
+REDIS_DB = 0

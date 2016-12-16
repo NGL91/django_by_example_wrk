@@ -36,4 +36,11 @@ urlpatterns = [
 	url(r'^edit/$', views.edit, name='edit'),
 
 	url(r'^$', views.dashboard, name='dashboard'),
+
+
+	url(r'^users/$', views.users_list, name='users_list'),
+	url(r'^users/follow/$', views.user_follow, name='user_follow'),
+	url(r'^users/(?P<username>[-\w]+)/$', views.user_detail, name='user_detail'),
+
+
 	]
