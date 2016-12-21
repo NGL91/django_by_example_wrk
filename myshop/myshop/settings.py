@@ -25,7 +25,7 @@ SECRET_KEY = '8b!oj3p+i8^8-lu-6k0e@ycm^6i5rz#fl9bmgkxuk$fe21a&ro'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['9c115b36.ngrok.io','localhost']
 
 
 # Application definition
@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'shop',
     'cart',
     'orders',
-    # 'sorl.thumbnail',
+    'paypal.standard.ipn',
+    'payment',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,3 +115,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+PAYPAL_RECEIVER_EMAIL = 'luanng@vng.com.vn'
+PAYPAL_TEST = True
