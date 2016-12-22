@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 
+#Generate a buy button with hidden value for push to paypal
 def payment_process(request):
 	order_id = request.session.get('order_id')
 	order = get_object_or_404(Order, id=order_id)
