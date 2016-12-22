@@ -1,0 +1,7 @@
+
+#Output json data in courses
+python manage.py dumpdata courses --indent=2 --ouput=courses/fixtures/subjects.json
+
+
+#Load data from json files in fixtures folder into database
+python manage.py loaddata subjects.json
