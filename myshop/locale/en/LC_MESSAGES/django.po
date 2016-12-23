@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-22 11:04+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: cart/forms.py:9
+msgid "Quantity"
+msgstr ""
+
+#: coupons/forms.py:5
+msgid "Coupon"
+msgstr ""
+
+#: myshop/settings.py:104
+msgid "English"
+msgstr ""
+
+#: myshop/settings.py:105
+msgid "Vietnam"
+msgstr ""
+
+#: myshop/urls.py:25
+msgid "^cart/"
+msgstr ""
+
+#: myshop/urls.py:26
+msgid "^orders/"
+msgstr ""
+
+#: myshop/urls.py:27
+msgid "^paypal/"
+msgstr ""
+
+#: myshop/urls.py:28
+msgid "^payment/"
+msgstr ""
+
+#: myshop/urls.py:29
+msgid "coupon/"
+msgstr ""
+
+#: myshop/urls.py:30
+msgid "^rosetta/"
+msgstr ""
+
+#: shop/templates/shop/base.html:7 shop/templates/shop/base.html.py:13
+msgid "My shop"
+msgstr ""
+
+#: shop/templates/shop/base.html:19
+msgid "Your cart"
+msgstr ""
+
+#: shop/templates/shop/base.html:21
+#, python-format
+msgid ""
+"\n"
+"\n"
+"\t\t\t%(total_items)s item%(total_items_plural)s\n"
+"\t\t\t$%(total_price)s\n"
+"\n"
+"\t\t\t"
+msgstr ""
+
+#: shop/templates/shop/base.html:29
+msgid "Your cart is empty."
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:17
+msgid "Add to cart"
+msgstr ""
