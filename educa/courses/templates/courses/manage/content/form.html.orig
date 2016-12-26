@@ -1,4 +1,32 @@
 {% extends "base.html" %}
+<<<<<<< HEAD
+{% block title %}
+	 {% if object %}
+	 Edit content "{{ object.title }}"
+	 {% else %}
+	 Add a new content
+	 {% endif %}
+{% endblock %}
+
+
+{% block content %}
+	 <h1>
+	 {% if object %}
+	 Edit content "{{ object.title }}"
+	 {% else %}
+	 Add a new content
+	 {% endif %}
+	 </h1>
+	 <div class="module">
+	 <h2>Course info</h2>
+	 <form action="" method="post" enctype="multipart/form-data">
+	 {{ form.as_p }}
+	 {% csrf_token %}
+	 <p><input type="submit" value="Save content"></p>
+	 </form>
+	 </div>
+{% endblock %}
+=======
 
 {% block title %}
     {% if object %}
@@ -26,3 +54,4 @@
         </form>
     </div>
 {% endblock %}
+>>>>>>> 62315424987ac64ccbdd511b494ccccee90b4932

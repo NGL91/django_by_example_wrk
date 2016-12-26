@@ -1,0 +1,73 @@
+[
+{
+<<<<<<< HEAD
+  "fields": {
+    "title": "Information Technology",
+    "slug": "information-technology"
+  },
+  "model": "courses.subject",
+  "pk": 1
+},
+{
+  "fields": {
+    "title": "Java Introduce",
+    "subject": 1,
+    "overview": "Java Introduce is a course introduce about basic things of Java like semantic, syntax,mindset.",
+    "owner": 1,
+    "slug": "java-introduce",
+    "created": "2016-12-22T14:03:43.432Z"
+  },
+  "model": "courses.course",
+  "pk": 1
+},
+{
+  "fields": {
+    "title": "Syntax",
+    "course": 1,
+    "description": "Syntax in Java"
+  },
+  "model": "courses.module",
+  "pk": 1
+},
+{
+  "fields": {
+    "title": "Loop in Java",
+    "course": 1,
+    "description": "Loop detail in Java"
+  },
+  "model": "courses.module",
+  "pk": 2
+=======
+  "pk": 1,
+  "model": "courses.subject",
+  "fields": {
+    "slug": "programming",
+    "title": "Programming"
+  }
+},
+{
+  "pk": 2,
+  "model": "courses.subject",
+  "fields": {
+    "slug": "mathematics",
+    "title": "Mathematics"
+  }
+},
+{
+  "pk": 3,
+  "model": "courses.subject",
+  "fields": {
+    "slug": "physics",
+    "title": "Physics"
+  }
+},
+{
+  "pk": 4,
+  "model": "courses.subject",
+  "fields": {
+    "slug": "music",
+    "title": "Music"
+  }
+>>>>>>> 62315424987ac64ccbdd511b494ccccee90b4932
+}
+]

@@ -7,4 +7,8 @@ ModuleFormSet = inlineformset_factory(Course,
                                       Module,
                                       fields=['title', 'description'],
                                       extra=2,
+<<<<<<< HEAD
                                       can_delete=True)
+=======
+                                      can_delete=True)
+>>>>>>> 62315424987ac64ccbdd511b494ccccee90b4932

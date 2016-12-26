@@ -256,4 +256,8 @@ ul#course-modules li:hover {
 .helptext {
     color:#ccc;
     padding-left:20px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 62315424987ac64ccbdd511b494ccccee90b4932
