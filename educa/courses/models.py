@@ -4,6 +4,8 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.utils import timezone
 from .fields import OrderField
+from django.template.loader import render_to_string
+from django.utils.safestring import mark_safe
 # Create your models here.
 
 class Subject(models.Model):
@@ -29,6 +31,10 @@ class Course(models.Model):
 	overview = models.TextField()
 	created = models.DateTimeField(auto_now_add=True)
 
+	students = models.ManyToManyField(User,
+							related_name='courses_joined',
+							blank=True)
+
 	class Meta:
 		ordering = ('-created',)
 
@@ -41,7 +47,7 @@ class Module(models.Model):
 						related_name='modules')
 	title = models.CharField(max_length=200)
 	description = models.TextField(blank=True)
-	order = OrderField(blank=True, for_fields=['couses'])
+	order = OrderField(blank=True, for_fields=['course'])
 
 	class Meta:
 		ordering=['order']
@@ -76,6 +82,10 @@ class ItemBase(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	def render(self):
+		return render_to_string('courses/content/{}.html'.format(
+								self._meta.model_name), {'item': self})
 
 class Text(ItemBase):
 	content = models.TextField()
